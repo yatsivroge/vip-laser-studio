@@ -156,4 +156,54 @@
   height: 100%;
   width: 100%;
 }
+
+@media (max-width: 1200px) {
+  .sales__card-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .discounts-item {
+    width: 100%;
+    max-height: 650px;
+  }
+}
+
+@media (max-width: 750px) {
+  .discounts-info[data-v-dcbc5360] {
+    padding: 18px 15px 14px 15px;
+  }
+
+  .discounts-info span {
+    font-size: 34px;
+    margin: 10px 0;
+  }
+
+  .discounts-info h3 {
+    font-size: 18px;
+    line-height: 1.1;
+    padding-bottom: 8px;
+  }
+
+  .discounts-image {
+    width: 45%;
+  }
+
+  .detail-btn {
+    line-height: 1.1;
+    padding: 12px 25px;
+  }
+
+}
+
+@media (max-width: 550px) {
+  .discounts-info span {
+    font-size: 30px;
+    margin: 6px 0;
+  }
+
+  .discounts-info p {
+    font-size: 12px;
+  }
+}
 </style>

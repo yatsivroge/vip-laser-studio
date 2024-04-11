@@ -1,5 +1,7 @@
 <script setup>
-
+const props = defineProps({
+  lang: String
+});
 </script>
 
 <template>
@@ -47,7 +49,15 @@
             </div>
           </div>
           <p>
-            <span class="lang-switch-btn">UA</span> / <span  class="lang-switch-btn">PL</span>
+            <span
+                class="lang-switch-btn"
+                :class="{ active: props.lang === 'UA', }"
+                @click="$emit('langChange','UA')"
+            >UA</span> / <span
+              class="lang-switch-btn"
+              :class="{ active: props.lang === 'PL', }"
+              @click="$emit('langChange','PL')"
+          >PL</span>
           </p>
         </div>
       </div>
@@ -136,6 +146,13 @@
   color: #000000;
   opacity: 0.67;
   text-decoration: unset;
+}
+
+.active {
+  background: #2F4E74;
+  border-radius: 10px;
+  padding: 6px;
+  color: white;
 }
 
 @media (max-width: 920px) {
